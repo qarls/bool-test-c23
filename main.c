@@ -23,7 +23,7 @@ int main(void) {
     putseq_implicit(-1); // true
     putseq_implicit(0);  // false
     putseq_implicit(1);  // true
-    putseq_implicit(2);  // false
+    putseq_implicit(2);  // true
 }
 
 void putseq(bool a) {
