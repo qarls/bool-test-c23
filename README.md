@@ -31,7 +31,7 @@ For reproduction purposes only.
 Hostname is hidden.
 
 ``` sh
-$uname -a \
+$ uname -a \
 && pacman -Qs ^gcc$ | grep 1 \
 && pacman -Qs ^clang$ | grep 1
 ```
