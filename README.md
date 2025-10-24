@@ -26,18 +26,16 @@ As an aside,
 my current gcc is solely able to compile without `<stdheader.h>`.
 This apparently matches with C23 spec [(Seacord, 2024, pp. 99-100)](#credits).
 
-## System
+## System Information
 For reproduction purposes only.
 Hostname is hidden.
 
-### Input
 ``` sh
-uname -a \
+$uname -a \
 && pacman -Qs ^gcc$ | grep 1 \
 && pacman -Qs ^clang$ | grep 1
 ```
 
-### Output
 ``` console
 Linux [HOSTNAME] 6.17.4-arch2-1 #1 SMP PREEMPT_DYNAMIC Sun, 19 Oct 2025 19:21:18 +0000 x86_64 GNU/Linux
 local/gcc 15.2.1+r22+gc4e96a094636-1
