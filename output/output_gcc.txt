@@ -1,0 +1,14 @@
+false
+false
+true
+false
+=Testing false equalities!=
+false
+true
+false
+false
+=Testing implicit conversions!=
+true
+false
+true
+true
