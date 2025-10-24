@@ -7,13 +7,24 @@ and nagging regard for C,
 why not write a short article?
 
 In Clang and GCC,
-I test a range of integers, i.e.
-$x \in [-1,2]$ 
+I test a range of integers of
+$x \in [-1,2]$
 in three test conditions:
 
 1. Equality to true (1)
 2. Equality to false (0)
 3. Implicit conversion through `if`
+
+As an aside,
+my current GCC is solely able to compile without `<stdheader.h>`.
+This behaviour apparently matches with C23 spec [(Seacord, 2024, pp. 99-100)](#credits) even if excluding Clang's.
+This new output has not conflicted with GCC's results former or Clang's.
+
+## Results
+
+**Table 1.**
+
+*Results of integers in equality and implicit "if"*
 
 |    | true | false | implicit |
 |----|------|-------|----------|
@@ -21,10 +32,6 @@ in three test conditions:
 | 0  | 0    | 1     | 0        |
 | 1  | 1    | 0     | 1        |
 | 2  | 0    | 0     | 1        |
-
-As an aside,
-my current gcc is solely able to compile without `<stdheader.h>`.
-This apparently matches with C23 spec [(Seacord, 2024, pp. 99-100)](#credits).
 
 ## System Information
 For reproduction purposes only.
@@ -44,7 +51,7 @@ local/clang 21.1.4-2
 
 ## Credits
 - Marshall, A. (March 4, 2011).
-Answer to *Does true equal to 1 and false equal to 0?/*.
+Answer to *Does true equal to 1 and false equal to 0?*.
 Stack Overflow.
 [https://stackoverflow.com/a/5189081](https://stackoverflow.com/a/5189081)
 - Seacord, R. C. (October 29, 2024). *Effective C, 2nd edition*. San Francisco, CA: No Starch Press.
